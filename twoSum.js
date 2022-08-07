@@ -176,4 +176,8 @@ function twoSuw(nums, target) {
 //  1,2,3,4,5
 //  2 
 
-console.log(twoSuw([3,7,11,15], 14));
+//console.log(twoSuw([3,7,11,15], 14));
+
+function twoSumTagTeam(nums, target){
+
+}
