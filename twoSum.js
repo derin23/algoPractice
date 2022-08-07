@@ -178,6 +178,23 @@ function twoSuw(nums, target) {
 
 //console.log(twoSuw([3,7,11,15], 14));
 
-function twoSumTagTeam(nums, target){
+function twoSumDj(nums, target){
+    const map = {}
+    for (let i = 0; i < nums.length; i++){
+        let currentMapVal = map[nums[i]];
+        console.log(currentMapVal);
+        if(currentMapVal !=undefined){
+            console.log([currentMapVal, i]);
+        }else{
+            const ntf = target - nums[i];
+            //map.key = ntf;
+            //map.value = i;
+           
+            map[ntf] = i;
+            console.log(map);
 
+        }
+    }
 }
+
+twoSumDj([1,2,3,4,5],9);
