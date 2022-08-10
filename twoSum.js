@@ -214,7 +214,7 @@ function twoSum2(nums, target) {
     let keyVal = {};
     for(let i = 0; i < nums.length; i++) {
         let currentMapVal = keyVal[nums[i]];
-        if(currentMapVal != undefined){
+        if(currentMapVal >= 0){
             return [currentMapVal, i];
         }else{
             let ntf = target - nums[i];
@@ -224,7 +224,7 @@ function twoSum2(nums, target) {
 }
 
 
- twoSum2([1,4,3,9,5], 9);
+ console.log(twoSum2([1,2], 3));
 
 // let mapx = {}
 // mapx.key = "y";
