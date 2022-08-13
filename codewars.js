@@ -86,33 +86,75 @@ function descendingOrder(n){
 // p1 = 1 > p + 1 = 3 : 2314
 // 2341
 
-function descendingOrder(n){
-  console.log("descendingOrder function is running ");
-let stringArray = n.toString().split("");
-console.log("stringArray: " + stringArray);
-let  nArray = stringArray.map();
-console.log("nArray: " + nArray);
-//console.log(nString);
-for(let i = 0; i < nArray.length; i++){
-  let swapValue = nArray[i];
-  let swapValue2 = nArray[i + 1];
-  if (swapValue < swapValue2 && i+1 < nArray.length){
-    nArray[i] = swapValue2;
-    nArray[i + 1] = swapValue;
-    i = 0;
-    console.log(i);
-    console.log("swapvalue: " + swapValue);
-    console.log("nArray[i]: " + nArray[i]);
-    console.log("nArray[i + 1: " + nArray[i + 1]);
-    console.log("array: " + nArray)
-  }
-}
-//let answer = parseInt(nArray.join(""),10);
-let answer = nArray;
-console.log(answer);
-return answer;
+// function descendingOrder(n){
+//   console.log("descendingOrder function is running ");
+// let stringArray = n.toString().split("");
+// console.log("stringArray: " + stringArray);
+// let  nArray = stringArray.map();
+// console.log("nArray: " + nArray);
+// //console.log(nString);
+// for(let i = 0; i < nArray.length; i++){
+//   let swapValue = nArray[i];
+//   let swapValue2 = nArray[i + 1];
+//   if (swapValue < swapValue2 && i+1 < nArray.length){
+//     nArray[i] = swapValue2;
+//     nArray[i + 1] = swapValue;
+//     i = 0;
+//     console.log(i);
+//     console.log("swapvalue: " + swapValue);
+//     console.log("nArray[i]: " + nArray[i]);
+//     console.log("nArray[i + 1: " + nArray[i + 1]);
+//     console.log("array: " + nArray)
+//   }
+// }
+// //let answer = parseInt(nArray.join(""),10);
+// let answer = nArray;
+// console.log(answer);
+// return answer;
 
   
+// }
+
+//descendingOrder(124569);
+
+
+
+// function descendingOrder(n) {
+//   let arrOfStr = n.toString().split("");
+//   const arrOfNum = arrOfStr.map(str => {
+//       return Number(str);
+//   })
+//   for(let i = 0; i < arrOfNum.length; i++) {
+//       let nextNum = arrOfNum[i + 1];
+//       console.log("num[i] is " + arrOfNum[i] + " nextNum is" + nextNum + " and i is " + i);
+//       if (i+1  < arrOfNum.length && arrOfNum[i] < nextNum) {
+          
+//           arrOfNum[i+1] = arrOfNum[i];
+//           arrOfNum[i] = nextNum;
+//           i = 0;
+//       }
+//   }
+//   console.log(arrOfNum);
+//   return arrOfNum;
+// }
+
+// descendingOrder(12345);
+
+function descendingOrder(n){
+  // let nString = String(n);
+  // //console.log(nString, typeof(nString));
+  // let nStringArray = nString.split("");
+  // //console.log(nStringArray);
+  // let sortedNStringArray = nStringArray.sort((a,b) => b-a);
+  // //console.log(sortedNStringArray);
+  // let stringAnswer = sortedNStringArray.join("");
+  // //console.log(stringAnswer);
+  // let answer = parseInt(stringAnswer);
+  // console.log(answer);
+
+  // return answer
+  //return parseInt(n.toString().split("").sort((a,b) => b - a).join(""));
+   return parseInt(String(n).split('').sort().reverse().join(''));
 }
 
-descendingOrder(124569);
+console.log(descendingOrder(13254));
