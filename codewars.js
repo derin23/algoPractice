@@ -140,21 +140,24 @@ function descendingOrder(n){
 
 // descendingOrder(12345);
 
-function descendingOrder(n){
-  // let nString = String(n);
-  // //console.log(nString, typeof(nString));
-  // let nStringArray = nString.split("");
-  // //console.log(nStringArray);
-  // let sortedNStringArray = nStringArray.sort((a,b) => b-a);
-  // //console.log(sortedNStringArray);
-  // let stringAnswer = sortedNStringArray.join("");
-  // //console.log(stringAnswer);
-  // let answer = parseInt(stringAnswer);
-  // console.log(answer);
-
-  // return answer
+function descendingOrder(n){ //BigO Time o(n + m + s + w + f) BigO space o(1)
+  let nString = String(n); //o(n) 
+  //console.log(nString, typeof(nString));
+  let nStringArray = nString.split(""); //o(nString)
+  //console.log(nStringArray);
+  let sortedNStringArray = nStringArray.sort((a,b) => b-a); //o(nStringArray)
+  //console.log(sortedNStringArray);
+  let stringAnswer = sortedNStringArray.join(""); //o(sortedNStringArray)
+  //console.log(stringAnswer);
+  let answer = parseInt(stringAnswer); //o(stringAnswer)
+  console.log(answer);
+//0(n*5)
+  return answer;
   //return parseInt(n.toString().split("").sort((a,b) => b - a).join(""));
-   return parseInt(String(n).split('').sort().reverse().join(''));
+  //return parseInt(String(n).split('').sort().reverse().join(''));
 }
 
-console.log(descendingOrder(13254));
+//console.log(descendingOrder(13254));
+
+let x = "1010101010";
+console.log(parseInt(x,2));
