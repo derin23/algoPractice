@@ -161,3 +161,19 @@ function descendingOrder(n){ //BigO Time o(n + m + s + w + f) BigO space o(1)
 
 let x = "1010101010";
 console.log(parseInt(x,2));
+
+//problem 3
+// Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
+
+// Examples:
+
+// solution('abc', 'bc') // returns true
+// solution('abc', 'd') // returns false
+
+//steps
+// take length of ending argument
+// create variable to hold chopped str
+// compare variable with second argument
+function solution(str, ending){
+  
+}
