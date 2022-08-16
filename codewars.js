@@ -177,3 +177,5 @@ console.log(parseInt(x,2));
 function solution(str, ending){
   
 }
+
+module.exports = solution;
