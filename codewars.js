@@ -140,27 +140,27 @@ function descendingOrder(n){
 
 // descendingOrder(12345);
 
-function descendingOrder(n){ //BigO Time o(n + m + s + w + f) BigO space o(1)
-  let nString = String(n); //o(n) 
-  //console.log(nString, typeof(nString));
-  let nStringArray = nString.split(""); //o(nString)
-  //console.log(nStringArray);
-  let sortedNStringArray = nStringArray.sort((a,b) => b-a); //o(nStringArray)
-  //console.log(sortedNStringArray);
-  let stringAnswer = sortedNStringArray.join(""); //o(sortedNStringArray)
-  //console.log(stringAnswer);
-  let answer = parseInt(stringAnswer); //o(stringAnswer)
-  console.log(answer);
-//0(n*5)
-  return answer;
-  //return parseInt(n.toString().split("").sort((a,b) => b - a).join(""));
-  //return parseInt(String(n).split('').sort().reverse().join(''));
-}
+// function descendingOrder(n){ //BigO Time o(n + m + s + w + f) BigO space o(1)
+//   let nString = String(n); //o(n) 
+//   //console.log(nString, typeof(nString));
+//   let nStringArray = nString.split(""); //o(nString)
+//   //console.log(nStringArray);
+//   let sortedNStringArray = nStringArray.sort((a,b) => b-a); //o(nStringArray)
+//   //console.log(sortedNStringArray);
+//   let stringAnswer = sortedNStringArray.join(""); //o(sortedNStringArray)
+//   //console.log(stringAnswer);
+//   let answer = parseInt(stringAnswer); //o(stringAnswer)
+//   console.log(answer);
+// //0(n*5)
+//   return answer;
+//   //return parseInt(n.toString().split("").sort((a,b) => b - a).join(""));
+//   //return parseInt(String(n).split('').sort().reverse().join(''));
+// }
 
 //console.log(descendingOrder(13254));
 
-let x = "1010101010";
-console.log(parseInt(x,2));
+//let x = "1010101010";
+//console.log(parseInt(x,2));
 
 //problem 3
 // Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
@@ -175,7 +175,28 @@ console.log(parseInt(x,2));
 // create variable to hold chopped str
 // compare variable with second argument
 function solution(str, ending){
-  
-}
+  const lengthOfEnding = ending.length;
+  const choppedStr = str.split("");
+  let lengthOfEnding1 = ending.length -1
+  let compareAnswer = [];
+  for(let i = str.length - 1; i > 0; i--){
+    //if(str[i] == ending[lengthOfEnding1 || ]){
+      compareAnswer.push(str[i])
+      lengthOfEnding1--
+    //}
+  }
 
-module.exports = solution;
+  let finalAnswer = compareAnswer.reverse().join("");
+  console.log("finalAnswer = "+finalAnswer)
+  console.log(ending);
+
+  //console.log(compareAnswer);
+  if(finalAnswer == ending){
+    return true;
+  }else{
+  return false;
+  }
+
+}
+console.log(solution("abc","bc"));
+//module.exports = solution;
