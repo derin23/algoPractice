@@ -1,4 +1,4 @@
-const solutionTest = require('../codewars/codewars.js');
+const solutionTest = require('../codewars/stringEndsWith.js');
 
 
 test('ingests "abc" and matches "bc"',() => {
