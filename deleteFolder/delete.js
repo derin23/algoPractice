@@ -1,1 +1,0 @@
-var delete1 = true;
