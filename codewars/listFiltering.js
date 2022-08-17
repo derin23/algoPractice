@@ -12,6 +12,7 @@
 // 3)check type of each element
 // 4)add elements that are int to the created variable
 // 5)return variable 
+// 6)if no numbers are found return "no numbers in array!"
 
 function filter_list(l) {
     // Return a new array with the strings filtered out
