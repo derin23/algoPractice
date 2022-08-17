@@ -198,5 +198,20 @@ function solution(str, ending){
   }
 
 }
+//Time o(n), space o(1)
+function solutionBetter(str, ending){ 
+  let reversedStr = str.split("").reverse();
+  let reversedArg = ending.split("").reverse();
+  let status = true;
+  
+  for(let i = 0; i < reversedArg.length; i++) {
+      if(reversedArg[i] != reversedStr[i]) {
+      status = false;
+  }
+}
+  return status;
+}
+
+
 console.log(solution("abc","bc"));
-//module.exports = solution;
+module.exports = solution;

@@ -1,4 +1,4 @@
-const solutionTest = require('../codewars.js');
+const solutionTest = require('../codewars/codewars.js');
 
 
 test('ingests "abc" and matches "bc"',() => {
