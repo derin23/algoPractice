@@ -1,9 +1,3 @@
- 
-
-
-
-
-
 //problem 3
 // Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
 
@@ -40,8 +34,9 @@ function solution(str, ending){
   }
 
 }
+
 //Time o(n), space o(1)
-function solutionBetter(str, ending){ 
+function betterSolution(str, ending){ 
   let reversedStr = str.split("").reverse();
   let reversedArg = ending.split("").reverse();
   let status = true;
