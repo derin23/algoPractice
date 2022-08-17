@@ -28,6 +28,5 @@ function filter_list(l) {
     return finalArray;
     }
   }
-
 console.log(filter_list([]));  
 module.exports = filter_list;
