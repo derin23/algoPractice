@@ -127,4 +127,4 @@ function descendingOrder(n){
 //console.log(descendingOrder(13254));
 
 //let x = "1010101010";
-//console.log(parseInt(x,2));
+//console.log(parseInt(x,2)); 
