@@ -29,5 +29,5 @@ function filter_list(l) {
     }
   }
 
-console.log(filter_list([1,"a",2]));  
+console.log(filter_list([]));  
 module.exports = filter_list;
