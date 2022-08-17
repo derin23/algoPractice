@@ -11,12 +11,23 @@
 // 2)loop through the given array
 // 3)check type of each element
 // 4)add elements that are int to the created variable
-// 5)return variable 
-// 6)if no numbers are found return "no numbers in array!"
+// 5)if no numbers are found return "no numbers in array!"
+// 6)return variable
 
 function filter_list(l) {
     // Return a new array with the strings filtered out
+    let finalArray = [];
+    for(let i = 0; i < l.length; i++){
+      if(typeof l[i] == "number"){
+        finalArray.push(l[i]);
+      }
+    }
+    if(finalArray.length == 0){
+      return "no numbers in array!";
+    }else{
+    return finalArray;
+    }
   }
 
-filter_list([1,"a",2]);  
+console.log(filter_list([1,"a",2]));  
 module.exports = filter_list;
