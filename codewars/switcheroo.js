@@ -12,13 +12,11 @@
 //3) loop through the array variable from back to front and push items to final string
 //4) join the final string and return it
 function switcheroo(x){
-let stringItems = x.split("").reverse();
-console.log("stringItems : "+stringItems);
+let stringItems = x.split("");
 let stringArray = [];
 let finalString ="";
 
-for(let i = stringItems.length - 1; i <= 0; i --){
-    console.log(stringItems);
+for(let i = stringItems.length - 1; i >= 0; i --){
     stringArray.push(stringItems[i]);
 } 
 finalString = stringArray.join("");
@@ -26,5 +24,5 @@ return finalString;
 
 }
 
-console.log(switcheroo("abc"));
+console.log(switcheroo("abcasasa"));
 module.exports = switcheroo;
