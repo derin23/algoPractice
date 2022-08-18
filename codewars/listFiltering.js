@@ -14,7 +14,7 @@
 // 5)if no numbers are found return "no numbers in array!"
 // 6)return variable
 
-function filter_list(l) {
+function filter_list(l) {  //time o(n) space o(1)
     // Return a new array with the strings filtered out
     let finalArray = [];
     for(let i = 0; i < l.length; i++){
