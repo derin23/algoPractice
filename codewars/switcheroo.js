@@ -12,6 +12,10 @@
 //3) loop through the array variable from back to front and push items to final string
 //4) join the final string and return it
 function switcheroo(x){
+if(x.length == 0 || x == null || x == undefined){
+    return "Please pass a non empty string.";
+}
+
 let stringItems = x.split("");
 let stringArray = [];
 let finalString ="";
