@@ -5,13 +5,13 @@ test("text is reversed", () =>{
 })
 
 test("empty string argument test", () =>{
-    expect(switcherooTest("")).toBe("null");
+    expect(switcherooTest("")).toBe("Something is wrong with the arugment. Please check the string that was passed in!");
 })
 
 test("null argument test", () =>{
-    expect(switcherooTest(null)).toBe("null");
+    expect(switcherooTest(null)).toBe("Something is wrong with the arugment. Please check the string that was passed in!");
 })
 
 test("undefined argument test", () =>{
-    expect(switcherooTest(undefined)).toBe("null");
+    expect(switcherooTest(undefined)).toBe("Something is wrong with the arugment. Please check the string that was passed in!");
 })
