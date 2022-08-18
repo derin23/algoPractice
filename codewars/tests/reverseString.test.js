@@ -1,4 +1,4 @@
-const switcherooTest = require("../switcheroo.js");
+const switcherooTest = require("../reverseString.js");
 
 test("text is reversed", () =>{
     expect(switcherooTest("abc")).toBe("cba");

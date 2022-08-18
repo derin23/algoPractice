@@ -28,5 +28,5 @@ return finalString;
 
 }
 
-console.log(switcheroo("abcasasa"));
+console.log(switcheroo("abc"));
 module.exports = switcheroo;
