@@ -5,9 +5,13 @@ test("text is reversed", () =>{
 })
 
 test("empty string argument test", () =>{
-    expect(switcherooTest("")).toBe(null);
+    expect(switcherooTest("")).toBe("null");
 })
 
 test("null argument test", () =>{
-    expect(switcherooTest(null)).toBe(null);
+    expect(switcherooTest(null)).toBe("null");
+})
+
+test("undefined argument test", () =>{
+    expect(switcherooTest(undefined)).toBe("null");
 })

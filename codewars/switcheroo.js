@@ -12,8 +12,8 @@
 //3) loop through the array variable from back to front and push items to final string
 //4) join the final string and return it
 function switcheroo(x){
-if(x.length == 0 || x == null || x == undefined){
-    return "Please pass a non empty string.";
+if(x == undefined || x.length == 0 || x == null ||  typeof(x) != "string"){
+    return "Something is wrong with the arugment. Please check the string that was passed in!";
 }
 
 let stringItems = x.split("");
