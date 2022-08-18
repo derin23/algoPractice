@@ -5,7 +5,7 @@
 //3) create variable to store final string
 //3) loop through the array variable from back to front and push items to final string
 //4) join the final string and return it
-function switcheroo(x){
+function reverseString(x){ // time complexity: o(n) Space: o(n)
 if(x == undefined || x.length == 0 || x == null ||  typeof(x) != "string"){
     return "Something is wrong with the arugment. Please check the string that was passed in!";
 }
@@ -22,5 +22,5 @@ return finalString;
 
 }
 
-console.log(switcheroo("abc"));
-module.exports = switcheroo;
+console.log(reverseString("abc"));
+module.exports = reverseString;
