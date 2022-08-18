@@ -1,10 +1,4 @@
-// Given a string made up of letters a, b, and/or c, switch the position of letters a and b (change a to b and vice versa). Leave any incidence of c untouched.
-
-// Example:
-
-// 'acb' --> 'bca'
-// 'aabacbaa' --> 'bbabcabb'
-
+// (did not find this from codewars), given a string reverse it!
 //steps
 //1) split argument into an array of chars
 //2) store it in a variable
