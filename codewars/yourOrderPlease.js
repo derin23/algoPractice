@@ -11,7 +11,7 @@
 // ""  -->  ""
 
 
-function order(words){
+function order(words){ //time: o(n^2 + m^2) space: o(n)
     //steps
     // 1. check for length of string. If 0, return empty string
     // 2. string is not empty split string by space. ex: [abc2, abc3, abc1]
@@ -36,20 +36,17 @@ function order(words){
        for(let j = 0; j < currentStrArr.length; j++){
         let currentStrArrNum = parseInt(currentStrArr[j]);
         if(isNaN(currentStrArrNum) !== true){
-          console.log("isNumeric is true ", currentStrArrNum);
           wordMap[currentStrArr[j]] = wordsArray[i];
         }
        }
     }
-
     
     for (const property in wordMap) {
-      console.log(`${property}: ${wordMap[property]}`);
       finalAnswer.push(wordMap[property]);
     }
 
     return finalAnswer.join(" ");
 
   }
-console.log(order("abc2 bcc1"));
-  //module.exports = order;
+
+module.exports = order;
