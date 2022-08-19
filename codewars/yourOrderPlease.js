@@ -9,7 +9,47 @@
 // "is2 Thi1s T4est 3a"  -->  "Thi1s is2 3a T4est"
 // "4of Fo1r pe6ople g3ood th5e the2"  -->  "Fo1r the2 g3ood 4of th5e pe6ople"
 // ""  -->  ""
+
+
 function order(words){
-    // ...
+    //steps
+    // 1. check for length of string. If 0, return empty string
+    // 2. string is not empty split string by space. ex: [abc2, abc3, abc1]
+    // 3. each element gets split into an array of chars
+    // 4. please each set of chars in a variable called currentStrArr. ex: [a,b,c,1]
+    // 5. if the element can be converted then we store the number as a key and value will be array joined as a string.
+    // 6. loop through the map and find 1, add it to the new array and keep incrementing 
+    // 7. return new array as a joined string
+
+    if(words.length == 0){
+      return "";
+    }
+
+    let wordsArray = words.split(" ");
+    
+    let wordMap = {};
+    let finalAnswer = [];
+
+    for(let i = 0; i < wordsArray.length; i++){
+      let currentStrArr = wordsArray[i].split("");
+      
+       for(let j = 0; j < currentStrArr.length; j++){
+        let currentStrArrNum = parseInt(currentStrArr[j]);
+        if(isNaN(currentStrArrNum) !== true){
+          console.log("isNumeric is true ", currentStrArrNum);
+          wordMap[currentStrArr[j]] = wordsArray[i];
+        }
+       }
+    }
+
+    
+    for (const property in wordMap) {
+      console.log(`${property}: ${wordMap[property]}`);
+      finalAnswer.push(wordMap[property]);
+    }
+
+    return finalAnswer.join(" ");
+
   }
-module.exports = order;
+console.log(order("abc2 bcc1"));
+  //module.exports = order;

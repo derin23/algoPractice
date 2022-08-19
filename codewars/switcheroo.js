@@ -27,3 +27,5 @@ function switcheroo(x){
 }
 
 console.log(switcheroo("acb"));
+
+module.exports = switcheroo;
