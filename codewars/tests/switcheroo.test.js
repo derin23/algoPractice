@@ -9,5 +9,13 @@ test("testing what happens if other letters are passed in.", () =>{
 })
 
 test("testing what happens if empty string is passed in.", () =>{
-    expect(switcherooTest("")).toBe("Please check argument!");
+    expect(switcherooTest("")).toBe(null);
+})
+
+test("testing what happens if null is passed in.", () =>{
+    expect(switcherooTest(null)).toBe(null);
+})
+
+test("testing what happens if undefined is passed in.", () =>{
+    expect(switcherooTest(undefined)).toBe(null);
 })
