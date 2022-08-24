@@ -13,27 +13,29 @@
 //ex) abc 
 
 function solution(str){ //time complexity: o(n), space complexity: o(n)
-    
-    let answer = [];
-    let moddedStr = str;
-    let currentPair = "";
+    if(str == null || str == undefined || str == "" ){
+        return "check input parameter"
+    }else{
+        let answer = [];
+        let moddedStr = str;
+        let currentPair = "";
 
-    if ((!str.length % 2) == 0){
-        moddedStr = moddedStr + "_";
-    }
-
-    for( let i = 0; i < moddedStr.length; i++){
-       
-        if((i % 2) == 0) {
-            currentPair += moddedStr[i];
-        } else {
-            currentPair += moddedStr[i];
-            answer.push(currentPair);
-            currentPair = "";
+        if ((!str.length % 2) == 0){
+            moddedStr = moddedStr + "_";
         }
-    }
-    return answer;
 
+        for( let i = 0; i < moddedStr.length; i++){
+        
+            if((i % 2) == 0) {
+                currentPair += moddedStr[i];
+            } else {
+                currentPair += moddedStr[i];
+                answer.push(currentPair);
+                currentPair = "";
+            }
+        }
+        return answer;
+    }
 }
 solution("abc");
 module.exports = solution;

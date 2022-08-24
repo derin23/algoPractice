@@ -7,3 +7,15 @@ test("testing normal happy path", () =>{
 test("testing odd number of inputs happy path", () => {
     expect(splitStringsTest("abc")).toStrictEqual(["ab","c_"]);
 })
+
+test("testing empty string", () => {
+    expect(splitStringsTest("")).toBe("check input parameter");
+})
+
+test("testing null", () => {
+    expect(splitStringsTest(null)).toBe("check input parameter");
+})
+
+test("testing undefined", () => {
+    expect(splitStringsTest(undefined)).toBe("check input parameter");
+})
