@@ -1,9 +1,9 @@
-const splitStringsTest = require("../splitString");
+const splitStringsTest = require("../splitStrings");
 
 test("testing normal happy path", () =>{
-    expect(splitStringsTest("abcd")).toBe(["ab","cd"]);
+    expect(splitStringsTest("abcd")).toStrictEqual(["ab","cd"]);
 })
 
 test("testing odd number of inputs happy path", () => {
-    expect(splitStringsTest("abc")).toBe(["ab","c_"]);
+    expect(splitStringsTest("abc")).toStrictEqual(["ab","c_"]);
 })
