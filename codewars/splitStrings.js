@@ -12,7 +12,7 @@
 //5) return answer array
 //ex) abc 
 
-function solution(str){
+function solution(str){ //time complexity: o(n), space complexity: o(n)
     
     let answer = [];
     let moddedStr = str;
