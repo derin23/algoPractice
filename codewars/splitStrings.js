@@ -37,3 +37,7 @@ function solution(str){ //time complexity: o(n), space complexity: o(n)
 }
 solution("abc");
 module.exports = solution;
+
+const solution1 = str => ((str+"_").match(/../g)||[]);
+
+console.log(solution1("abcde"));
