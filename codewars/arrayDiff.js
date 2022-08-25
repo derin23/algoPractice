@@ -8,6 +8,8 @@
 
 // arrayDiff([1,2,2,2,3],[2]) == [1,3]
 
+//steps
+//create answer array
 function arrayDiff(a, b) {
   
 }
