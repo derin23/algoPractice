@@ -15,7 +15,7 @@
  * 3.parse through array a. if match is found, do nothing. If match is not found, push the current value of array a to answer array.
  * 4. return answer array 
  */
- function arrayDiff(a,b) {
+ function arrayDiff(a,b) { //time complexity: o(n^2), Space complexity: idk
     let answer = a;
     for(let i = 0; i < a.length; i++){
         for(let j = 0; j < b.length; j++){
