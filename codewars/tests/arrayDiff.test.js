@@ -23,6 +23,6 @@ test("(1,2,2),[] should return [1,2,2]",() => {
 test("([], [1,2]) should return []", () => {
     expect(arrayDiffTest([],[1,2])).toEqual([]);
 })
-test("([1,2,3], [1,2]) should return [2]", () => {
-    expect(arrayDiffTest([1,2,3], [1,2])).toEqual([3]);
+test("([1,2,3], [1,3]) should return [2]", () => {
+    expect(arrayDiffTest([1,2,3], [1,3])).toEqual([2]);
 })

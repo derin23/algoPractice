@@ -14,19 +14,56 @@
  * 2.parse through array b
  * 3.parse through array a. if match is found, do nothing. If match is not found, push the current value of array a to answer array.
  * 4. return answer array 
+ * 
+ * answerIndex = 0
+ * outer for loop , answerIndex should increment at end of for loop
+ * if match is found, answerIndex should decrement by 1 if answerIndex > 0
+ * 
  */
- function arrayDiff(a,b) { //time complexity: o(n^2), Space complexity: idk?
-    let answer = a;
+ function arrayDiff(a,b) { //time complexity:
+    
+    let answer = [...a];
+    let answerIndex = 0;
+
     for(let i = 0; i < a.length; i++){
-        for(let j = 0; j < b.length; j++){
-            if(b[i] == a[j]){
-                answer.splice(i,1);
-            }
-        }      
+        for(let j = 0; j < b.length; j++){ 
+            console.log(answer); 
+            console.log('answerIndex is: ', answerIndex); 
+            if(a[i] == b[j]){  
+                answer.splice(answerIndex,1);
+                if(answerIndex != 0){
+                    answerIndex--;   
+                }  
+            } 
+            
+        }           
+       
     }
     return answer;
 }
 
 module.exports = arrayDiff;
 
-console.log(arrayDiff([1,2,3],[1,2])); //[3]
+console.log(arrayDiff([1,2,2,2,3,2],[1,2])); //[3]
+
+
+
+
+// function arrayDiff1(a,b) { //time complexity:
+//     let counter = a.length;
+//     let answer = [...a];
+//     console.log(typeof(answer));
+//     for(let i = 0; i < a.length; i++){
+//         console.log(answer.length);
+//         for(let j = 0; j < b.length; j++){   
+//             var filtered = array.filter(function(value, index, arr){ 
+//                 return value !=;
+//             });
+//         }            
+//     }
+//     return answer;
+// }
+
+
+
+// console.log(arrayDiff1([1,2,2,2,3],[1,2])); //[3]
