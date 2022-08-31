@@ -91,7 +91,7 @@
 
 //  }
 
-function arrayDiff(a,b){
+function arrayDiff(a,b){ //time complexity: o(n*m), space complexity: o(n)
     let answer = [];
     for( let i = 0; i < a.length; i++){
 
