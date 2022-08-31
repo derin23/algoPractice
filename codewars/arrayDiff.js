@@ -20,31 +20,31 @@
  * if match is found, answerIndex should decrement by 1 if answerIndex > 0
  * 
  */
- function arrayDiff(a,b) { //time complexity:
+//  function arrayDiff(a,b) { //time complexity:
     
-    let answer = [...a];
-    let answerIndex = 0;
+//     let answer = [...a];
+//     let answerIndex = 0;
 
-    for(let i = 0; i < a.length; i++){
-        for(let j = 0; j < b.length; j++){ 
-            console.log(answer); 
-            console.log('answerIndex is: ', answerIndex); 
-            if(a[i] == b[j]){  
-                answer.splice(answerIndex,1);
-                if(answerIndex != 0){
-                    answerIndex--;   
-                }  
-            } 
+//     for(let i = 0; i < a.length; i++){
+//         for(let j = 0; j < b.length; j++){ 
+//             console.log(answer); 
+//             console.log('answerIndex is: ', answerIndex); 
+//             if(a[i] == b[j]){  
+//                 answer.splice(answerIndex,1);
+//                 if(answerIndex != 0){
+//                     answerIndex--;   
+//                 }  
+//             } 
             
-        }           
+//         }           
        
-    }
-    return answer;
-}
+//     }
+//     return answer;
+// }
 
-module.exports = arrayDiff;
+// module.exports = arrayDiff;
 
-console.log(arrayDiff([1,2,2,2,3,2],[1,2])); //[3]
+// console.log(arrayDiff([1,2,2,2,3,2],[1,2])); //[3]
 
 
 
@@ -67,3 +67,55 @@ console.log(arrayDiff([1,2,2,2,3,2],[1,2])); //[3]
 
 
 // console.log(arrayDiff1([1,2,2,2,3],[1,2])); //[3]
+
+
+// Your goal in this kata is to implement a difference function, which subtracts one list from another and returns the result.
+
+// It should remove all values from list a, which are present in list b keeping their order.
+
+// arrayDiff([1,2],[1]) == [2]
+// If a value is present in b, all of its occurrences must be removed from the other:
+
+// arrayDiff([1,2,2,2,3],[2]) == [1,3]
+// arrayDiff([1,2,3],[1,2]) == [3]
+//[0:true, ]
+//steps:
+/*
+    1) create new map called answer(key:Index, value:current value of array ).
+    2) loop through the first array a.
+    3) inside loop goes through array b.
+    4) 
+
+*/
+//  function arrayDiff(a,b) {
+
+//  }
+
+function arrayDiff(a,b){
+    let answer = [];
+    for( let i = 0; i < a.length; i++){
+
+        let bContainsVaueOfA = false;
+
+        for( let j = 0; j < b.length; j++){
+            if(a[i] == b[j]){
+                bContainsVaueOfA = true;
+            }
+        }
+
+        if(bContainsVaueOfA == false){
+            answer.push(a[i]);
+        }
+
+    }
+    return answer;
+}
+
+
+
+console.log(arrayDiff([1,2,4],[2,3]));
+module.exports = arrayDiff;
+// let diffArray = [1,4];
+// bContainsAValue = false;
+
+
