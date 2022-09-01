@@ -7,16 +7,28 @@
 // steps
 // 1)create answer string var
 // 2)parse through the string that is passed in.
-// 3)check each char for upper case, if upper case add space plus current char to answer, else push current char 
+// 3)check each char for upper case, if upper case add space plus current char to 
+// answer, else push current char 
 function solution(string) {
     
+    let answer = "";
+    
+    if (string == undefined || string == null){
+        return "input is not correct";
+    }
+    for(let i = 0; i < string.length; i++) {
+
+        if(string[i].toUpperCase() == string[i]) {
+            answer += " " + string[i];
+        } else {
+            answer += string[i];
+        }
+    }
+    return answer;
 }
 
-function solTest(string) {
-    return 'camel Casing';
-}
-
+console.log(solution("undefinedSSasS"));
 module.exports = {
-    solution: solution, 
-    solTest: solTest
+    solution: solution
 };
+
