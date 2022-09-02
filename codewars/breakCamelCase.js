@@ -9,22 +9,22 @@
 // 2)parse through the string that is passed in.
 // 3)check each char for upper case, if upper case add space plus current char to 
 // answer, else push current char 
-function solution(string) { //time complexity: O(n)
+function solution(string) { //time complexity: O(n) // Space complexity: O(n)
     
-    let answer = "";
+    let answer = ""; //O(1)
     
     if (string == undefined || string == null){
-        return "input is not correct"; //O(1)
+        return "input is not correct"; //O(1) //O(1)
     }
-    for(let i = 0; i < string.length; i++) { //O(n)
+    for(let i = 0; i < string.length; i++) { //O(n) //O(1)
 
-        if(string[i].toUpperCase() == string[i]) { //0(n)
-            answer += " " + string[i];
-        } else {                      //O(n)
-            answer += string[i]; 
+        if(string[i].toUpperCase() == string[i]) { //0(1)
+            answer += " " + string[i]; //O(n)
+        } else {                      //O(1)
+            answer += string[i]; //O(n)
         }
     }
-    return answer; //O(1)
+    return answer; //O(1) //
 }
 
 console.log(solution("undefinedSSasS"));
