@@ -4,6 +4,11 @@
 // * url = "http://www.zombie-bites.com"         -> domain name = "zombie-bites"
 // * url = "https://www.cnet.com"                -> domain name = cnet"
 
+
 function domainName(url){
-  //your code here
+  return 'king';
 }
+
+module.exports = {
+  domainName : domainName
+};
