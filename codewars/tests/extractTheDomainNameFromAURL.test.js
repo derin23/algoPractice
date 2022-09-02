@@ -4,12 +4,16 @@ test('"http.king.com" should return king',() => {
     expect(extractDomainTest.domainName('http.king.com')).toBe('king');
 })
 
-test('"https.prince.com" should return prince',() => {
-    expect(extractDomainTest.domainName('https.prince.com')).toBe('prince');
+test('"https.prince.dev" should return prince',() => {
+    expect(extractDomainTest.domainName('https.prince.dev')).toBe('prince');
 })
 
-test('"https.www.queen.com" should return queen',() => {
-    expect(extractDomainTest.domainName('https.www.queen.com')).toBe('queen');
+test('"flags.dev" should return flags',() => {
+    expect(extractDomainTest.domainName('flags.dev')).toBe('flags');
+})
+
+test('"https.www.queen.net" should return queen',() => {
+    expect(extractDomainTest.domainName('https.www.queen.net')).toBe('queen');
 })
 
 test('"http://github.com/carbonfive/raygun"" should return github',() => {
