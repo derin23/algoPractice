@@ -7,7 +7,7 @@
 //steps
 //1)create var string answer
 //2)create a boolean isEnd that is false
-//3)create an array protocol and store possible protocols
+//3)create an array protocols and store possible protocols
 //4)parse through input
 //5)check if it matchs a protocol turn isEnd true. 
 //6)add chars to answer if a protcol is present and isEnd is true until you hit "."
@@ -18,7 +18,14 @@
 // 
 
 function domainName(url){
-  return 'king';
+  
+  let answer = "";
+  let isEnd = false;
+  let protocols = ["http://", "https://", "www.", "http://www.", "https://www."];
+
+  for(let i = 0; i < url.length; i++){
+
+  }
 }
 
 module.exports = {
