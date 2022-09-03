@@ -6,12 +6,17 @@
 
 //steps
 //1)create var string answer
-//1.5) create a boolean isLongForm that is false
-//2)parse through input
-//3)check if there is a "//www." which turns isLongForm true;  
-//4)if isLongForm is true then add chars to answer until you hit a "."
-//5)if isLongForm is false then add what is after "//" to answer until you hit "."
-//6)return answer
+//2)create a boolean isEnd that is false
+//3)create an array protocol and store possible protocols
+//4)parse through input
+//5)check if it matchs a protocol turn isEnd true. 
+//6)add chars to answer if a protcol is present and isEnd is true until you hit "."
+//7)return answer
+
+// derin.com
+// http://, https:// , www. http://www. https://www.
+// 
+
 function domainName(url){
   return 'king';
 }

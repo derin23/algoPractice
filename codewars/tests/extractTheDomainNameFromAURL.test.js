@@ -8,10 +8,6 @@ test('"https.prince.dev" should return prince',() => {
     expect(extractDomainTest.domainName('https.prince.dev')).toBe('prince');
 })
 
-test('"flags.dev" should return flags',() => {
-    expect(extractDomainTest.domainName('flags.dev')).toBe('flags');
-})
-
 test('"https.www.queen.net" should return queen',() => {
     expect(extractDomainTest.domainName('https.www.queen.net')).toBe('queen');
 })
