@@ -13,7 +13,7 @@
 //6)add chars to answer if a protcol is present and isEnd is true until you hit "."
 //7)return answer
 
-// derin.com
+// is derin.com a complete url?
 // http://, https:// , www. http://www. https://www.
 // 
 
