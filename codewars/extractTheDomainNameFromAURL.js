@@ -24,7 +24,7 @@ function domainName(url){
   let protocols = ["http://", "https://", "www.", "http://www.", "https://www."];
 
   for(let i = 0; i < url.length; i++){
-
+    
   }
 }
 
