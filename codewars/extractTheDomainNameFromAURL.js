@@ -21,13 +21,32 @@ function domainName(url){
   
   let answer = "";
   let isEnd = false;
-  let protocols = ["http://", "https://", "www.", "http://www.", "https://www."];
+  //let protocols = ["http://www.", "https://www.", "http://", "https://", "www." ];
+  let protocols = ["http://", "https://", "www." ];
 
   for(let i = 0; i < url.length; i++){
-    
-  }
-}
+    answer = answer + url[i];
 
+    if(isEnd == true && url[i] == "."){
+      answer = answer.slice(0, -1);
+      return answer;
+    }
+
+    if(protocols.includes(answer)){
+      let result = url[i + 1] + url[i + 2] + url[i + 3] + url[i + 4];
+      if(result == "www.") {
+        i += 4;        
+      }
+      isEnd = true;
+      answer = "";
+    }
+
+
+  
+  }
+  
+}
+console.log(domainName('https://queen.net'));
 module.exports = {
   domainName : domainName
 };
