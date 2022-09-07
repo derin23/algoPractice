@@ -16,14 +16,14 @@ test('"http://github.com/carbonfive/raygun"" should return github',() => {
     expect(extractDomainTest.domainName('http://github.com/carbonfive/raygun')).toBe('github');
 })
 
-// test('"" should return "check input"', () => {
-//     expect(extractDomainTest.domainName("")).toBe('check input');
-// })
+test('"" should return "check input"', () => {
+    expect(extractDomainTest.domainName("")).toBe('check input');
+})
 
-// test('null should return "check input', () => {
-//     expect(extractDomainTest.domainName(null)).toBe('check input');
-// })
+test('null should return "check input', () => {
+    expect(extractDomainTest.domainName(null)).toBe('check input');
+})
 
-// test('undefined should return "check input', () => {
-//     expect(extractDomainTest.domainName(undefined)).toBe('check input');
-// })
+test('undefined should return "check input', () => {
+    expect(extractDomainTest.domainName(undefined)).toBe('check input');
+})
