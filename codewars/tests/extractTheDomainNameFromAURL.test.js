@@ -27,3 +27,7 @@ test('null should return "check input', () => {
 test('undefined should return "check input', () => {
     expect(extractDomainTest.domainName(undefined)).toBe('check input');
 })
+
+test('derin.io should return derin', () => {
+    expect(extractDomainTest.domainName('derin.io')).toBe('derin');
+})

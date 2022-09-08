@@ -17,14 +17,20 @@
 // http://, https:// , www. http://www. https://www.
 // 
 
-function domainName(url){
+function domainName(url){ //time complexity: o(n*m), space complexity: o(n)
+
+  if(url == null || url == undefined || url == "" ){
+    return 'check input';
+  }
   
   let answer = "";
   let isEnd = false;
   let protocols = ["http://", "https://", "www." ];
-  if(url == null || url == undefined || url == "" ){
-    return 'check input';
-  }else{
+  let preCheckProtocols =  ["http", "www." ];
+  let preCheck = url[0] + url[1] + url[2] + url[3];
+  
+ if(preCheckProtocols.includes(preCheck)) {
+    console.log("passes precheck ", preCheck);
     for(let i = 0; i < url.length; i++){
       answer = answer + url[i];
 
@@ -42,10 +48,23 @@ function domainName(url){
         answer = "";
       }
     }
-}
+} else {
+  console.log("else statement")
+  isEnd = true;
+  for(let i = 0; i < url.length; i++){
+    answer = answer + url[i];
+
+    if(isEnd == true && url[i] == "."){
+      answer = answer.slice(0, -1);
+      return answer;
+    }
+}}
   
 }
-console.log(domainName('https://n.io'));
+console.log(domainName('http://noodoo.io'));
 module.exports = {
   domainName : domainName
 };
+
+
+//v06df3lf3h2e.fr/index.php
