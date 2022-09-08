@@ -28,9 +28,8 @@ function domainName(url){ //time complexity: o(n*m), space complexity: o(n)
   let protocols = ["http://", "https://", "www." ];
   let preCheckProtocols =  ["http", "www." ];
   let preCheck = url[0] + url[1] + url[2] + url[3];
-  
+
  if(preCheckProtocols.includes(preCheck)) {
-    console.log("passes precheck ", preCheck);
     for(let i = 0; i < url.length; i++){
       answer = answer + url[i];
 
@@ -49,7 +48,6 @@ function domainName(url){ //time complexity: o(n*m), space complexity: o(n)
       }
     }
 } else {
-  console.log("else statement")
   isEnd = true;
   for(let i = 0; i < url.length; i++){
     answer = answer + url[i];
