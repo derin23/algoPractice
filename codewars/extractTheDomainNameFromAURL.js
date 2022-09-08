@@ -17,7 +17,7 @@
 // http://, https:// , www. http://www. https://www.
 // 
 
-function domainName(url){ //time complexity: o(n*m), space complexity: o(n)
+function domainName(url){ //time complexity: o(n*m*x), space complexity: o(n)
 
   if(url == null || url == undefined || url == "" ){
     return 'check input';
@@ -48,11 +48,10 @@ function domainName(url){ //time complexity: o(n*m), space complexity: o(n)
       }
     }
 } else {
-  isEnd = true;
   for(let i = 0; i < url.length; i++){
     answer = answer + url[i];
 
-    if(isEnd == true && url[i] == "."){
+    if(url[i] == "."){
       answer = answer.slice(0, -1);
       return answer;
     }
