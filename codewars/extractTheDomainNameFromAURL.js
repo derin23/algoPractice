@@ -58,7 +58,7 @@ function domainName(url){ //time complexity: o(n*m*x), space complexity: o(n)
 }}
   
 }
-console.log(domainName('http://noodoo.io'));
+console.log(domainName('http://mysitewww.com'));
 module.exports = {
   domainName : domainName
 };
