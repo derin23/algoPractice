@@ -6,4 +6,9 @@
 
 function pigIt(str){
     //Code here
-  }
+}
+
+module.exports = {
+  pigIt : pigIt
+};
+

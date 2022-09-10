@@ -1,0 +1,1 @@
+const simplePigLatinTest = require("../simplePigLatin");
