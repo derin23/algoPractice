@@ -13,3 +13,4 @@ module.exports = {
   pigIt : pigIt
 };
 
+//figure out why my pushes from mac do not show up on profile as my changes
