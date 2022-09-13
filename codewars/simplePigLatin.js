@@ -7,9 +7,15 @@
 //steps
 function pigIt(str){
     let answer = "";
-    
-}
+    let pigLatinArray = [];
 
+    pigLatinArray = str.split(" ");
+    console.log(pigLatinArray);
+    for(let i = 0; i < str.length; i++){
+
+    }
+}
+pigIt("Pig Latin is cool");
 module.exports = {
   pigIt : pigIt
 };
