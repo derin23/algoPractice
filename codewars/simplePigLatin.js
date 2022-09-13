@@ -6,6 +6,7 @@
 
 //steps
 function pigIt(str){
+    let answer = "";
     
 }
 
