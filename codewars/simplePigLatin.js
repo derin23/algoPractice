@@ -7,13 +7,31 @@
 //steps
 function pigIt(str){
     let answer = "";
-    let pigLatinArray = [];
+    let pigLatinArray = str.split(" ").split("");
+    console.log(typeof(pigLatinArray));
+    
+  //  answer = pigLatinArray.join(" ");
+ 
+    //console.log(pigLatinArray);
+    for(let i = 0; i < pigLatinArray.length; i++){
+      let currentPig = pigLatinArray[i];
+      // let charPig = currentPig.split("");
+      // console.log(charPig);
+      // currentPig.push(pigLatinArray[i].split(" "));
+      // answer = currentPig.join('');
+      console.log(typeof(currentPig));
+      
 
-    pigLatinArray = str.split(" ");
-    console.log(pigLatinArray);
-    for(let i = 0; i < str.length; i++){
-
+      for(let j = 0; j < 1; j++){
+        // let firstLetter = charPig[0]; 
+        // console.log(typeof(charPig));
+       // answer = charPig.replace(firstLetter, "");
+        
+      }
     }
+
+  
+    
 }
 pigIt("Pig Latin is cool");
 module.exports = {
