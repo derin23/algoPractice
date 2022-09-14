@@ -18,7 +18,6 @@ let punctuations = [".", "?", '"', "'", ",", "-", "!", ":", ";", "(", ")", "[", 
 
 for(i in words){
 let letters = words[i].split("");
-  //let firstLetter = letters[0];
   
   if(punctuations.includes(words[i])){
 
@@ -34,7 +33,6 @@ let letters = words[i].split("");
 
     }
 }
-
 
 }
 
