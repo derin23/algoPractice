@@ -7,3 +7,4 @@ test('Pig latin is cool should return igPay atinlay siay oolcay', () => {
 test('Hello world ! should return elloHay orldway !', () => {
     expect(simplePigLatinTest.pigIt("Hello world !")).toBe("elloHay orldway !");
 })
+
