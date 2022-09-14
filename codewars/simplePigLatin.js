@@ -11,7 +11,7 @@
 //4)create array to hold each chars
 //5)create var to hold first letter of each word
 //6)slice first char then push first char to end and add 'ay' as long as char does not match any of the char in punctuation array.
-function pigIt(str){ //time complexity: o(n^2 + m^2)
+function pigIt(str){ //time complexity: o(n^2 + m^2) space complexity: o(n + m + p)
 let answer = "";
 let words = str.split(" ");
 let punctuations = [".", "?", '"', "'", ",", "-", "!", ":", ";", "(", ")", "[", "]", "...", "/"];
