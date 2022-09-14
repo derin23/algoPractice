@@ -49,33 +49,3 @@ module.exports = {
   pigIt : pigIt
 };
 
-
-// function pigIt(str){
-//     let answer = "";
-//     let pigLatinArray = str.split(" ").split("");
-//     console.log(typeof(pigLatinArray));
-    
-//   //  answer = pigLatinArray.join(" ");
- 
-//     //console.log(pigLatinArray);
-//     for(let i = 0; i < pigLatinArray.length; i++){
-//       let currentPig = pigLatinArray[i];
-//       // let charPig = currentPig.split("");
-//       // console.log(charPig);
-//       // currentPig.push(pigLatinArray[i].split(" "));
-//       // answer = currentPig.join('');
-//       console.log(typeof(currentPig));
-      
-
-//       for(let j = 0; j < 1; j++){
-//         // let firstLetter = charPig[0]; 
-//         // console.log(typeof(charPig));
-//        // answer = charPig.replace(firstLetter, "");
-        
-//       }
-//     }
-
-  
-    
-// }
-
