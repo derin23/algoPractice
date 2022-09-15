@@ -7,7 +7,7 @@
 //2)parse through array and check for 0
 //3)if we find 0 slice it out and push to end of array
 //4)return answer
-function moveZeros(arr) {
+function moveZeros(arr) { //space: o(n+m) time: o(n + m)
     let answer = [];
     let zeroCounter = 0;
     for(let i = 0; i <arr.length; i++){
