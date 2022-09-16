@@ -10,13 +10,22 @@
 // "Buckethead" is an anagram of "DeathCubeK"
 
 // write the function isAnagram
+//steps
+//1)
 var isAnagram = function(test, original) {
-
-    return true;
+    let originalString = original.split("").sort();
+    let compareString = test.split("").sort();
+    
+    if(originalString == compareString){
+        return true
+    }else{
+        return false
+    }
+    
 
 };
 
-
+isAnagram("abc","bca");
 module.exports = {
     isAnagram : isAnagram
 };
