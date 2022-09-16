@@ -9,3 +9,14 @@
 
 // "Buckethead" is an anagram of "DeathCubeK"
 
+// write the function isAnagram
+var isAnagram = function(test, original) {
+
+    return true;
+
+};
+
+
+module.exports = {
+    isAnagram : isAnagram
+};
