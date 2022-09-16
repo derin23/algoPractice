@@ -1,3 +1,4 @@
+// from formation 21 day challenge
 // Prompt
 // Given a linked list, delete the middle node. If the list is even length, delete the node at the start of the second half of the list.
 
@@ -14,3 +15,7 @@
 function deleteMiddleNode(head) {
   /* your code here */
 }
+
+module.exports = {
+    deleteMiddleNode : deleteMiddleNode
+};
