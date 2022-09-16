@@ -24,8 +24,23 @@ function moveZeros(arr) { //space: o(n+m) time: o(n + m)
     return answer;
 }
 
-console.log(moveZeros([1,0,1,2,0,2,0,1,3,'a']));
+// console.log(moveZeros([1,0,1,2,0,2,0,1,3,'a']));
 
+function moveZerosLessCode(arr){ //time: o(n^2) space: o(n + m)
+    let answer = [];
+
+    for(let i = arr.length -1; i >= 0; i-- ){
+        if(arr[i] === 0){
+            answer.unshift(0);
+        } else {
+            answer.push(arr[i]);
+        }
+    }
+    return answer.reverse();
+}
+
+console.log(moveZerosLessCode([1,0,1,2,0,2,0,1,3,'a']));
 module.exports = {
-    moveZeros : moveZeros
+    moveZeros : moveZeros,
+    moveZerosLessCode : moveZerosLessCode
 };
