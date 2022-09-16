@@ -40,7 +40,12 @@ function moveZerosLessCode(arr){ //time: o(n^2) space: o(n + m)
 }
 
 console.log(moveZerosLessCode([1,0,1,2,0,2,0,1,3,'a']));
+
+const moveZerosSingleLine = arr => arr.sort((b) => b === 0 ? -1 : 0);
+
+
 module.exports = {
     moveZeros : moveZeros,
-    moveZerosLessCode : moveZerosLessCode
+    moveZerosLessCode : moveZerosLessCode,
+    moveZerosSingleLine : moveZerosSingleLine
 };
