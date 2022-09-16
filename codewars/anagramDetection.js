@@ -17,9 +17,9 @@ var isAnagram = function(test, original) {
     let compareString = test.split("").sort();
     
     if(originalString == compareString){
-        return true
+        return true;
     }else{
-        return false
+        return false;
     }
     
 

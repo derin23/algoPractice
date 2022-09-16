@@ -1,5 +1,5 @@
 const isAnagramTest = require("../anagramDetection");
 
 test("happy path test", () =>{
-    expect(isAnagramTest.isAnagram("foefet", "toffee")).toBe(true);
+    expect(isAnagramTest.isAnagram("foefet", "toffee")).returnsTrue(true);
 })
