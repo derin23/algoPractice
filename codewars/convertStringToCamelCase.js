@@ -8,6 +8,10 @@ function toCamelCase(str){
 
     let strArray;    
 
+    if(str === ""){
+        return "";
+    }
+    
     if(str.indexOf("-") !== -1){
         strArray = str.split("-");
     }else{
