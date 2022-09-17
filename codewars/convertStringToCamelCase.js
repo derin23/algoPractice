@@ -6,24 +6,24 @@
 
 function toCamelCase(str){
 
-    let answer = "";
-    let localStrArray = str;
+    let strArray;    
 
-    for(let i = 0; i < localStrArray.length; i++){
-        if(localStrArray[i] == "-" || localStrArray[i] == "_"){
-            localStrArray.charAt(i + 1).toUpperCase() + str.slice(1);
-            //localStrArray.splice(i,1);
-        }
+    if(str.indexOf("-") !== -1){
+        strArray = str.split("-");
+    }else{
+        strArray = str.split("_");
     }
-
-    for(let j = 0; j < localStrArray.length; j++){
-        answer = answer + localStrArray[j];
-    }
-
-   
-
-    return answer;
     
+    let answer = strArray[0];
+    
+    for(let i = 1; i <strArray.length; i++){
+        answer += capStr(strArray[i]);
+    }
+    
+    function capStr(string){
+        return string[0].toUpperCase() + string.slice(1);
+    }
+    return answer;
 }
 
 console.log(toCamelCase("some-thing"))
