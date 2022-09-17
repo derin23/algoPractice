@@ -42,16 +42,10 @@
  * param {number} x
  * return {boolean}
  */
- var isPalindrome = function(x) {
-    let numberStr = x.toString().split("");
-    let revNumStr = x.toString().split("").reverse();
-    
-    if(numberStr.join() === revNumStr.join()){
-        return true;
-    }else{
-        return false;
-    }
-    
+ var isPalindrome = function(x) { //time complexity: o(n), space complexity: o(n)
+    let revNumStr = x.toString().split("").reverse().join("");
+   // console.log(18050%100) // finish video
+    return (x.toString() === revNumStr)    
 };
 
 console.log(isPalindrome(121));

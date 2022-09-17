@@ -15,3 +15,7 @@ test("313 returns true", () =>{
 test("123 returns false", () =>{
     expect(isPalindromeTest.isPalindrome(123)).toBe(false);
 })
+
+test("empty input returns false",() =>{
+    expect(isPalindromeTest.isPalindrome(123)).toBe(false);
+})
