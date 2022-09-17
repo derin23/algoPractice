@@ -13,15 +13,16 @@
 //steps
 //1)
 var isAnagram = function(test, original) {
-    // let originalString = original.split("").sort().join("");
-    // let compareString = test.split("").sort().join("");
-    
-    // return (originalString === compareString)
-    return (original.split("").sort().join("") === test.split("").sort().join(""));
+    // let originalString = original.toLowerCase().split("").sort().join("");
+    // let compareString = test.toLowerCase().split("").sort().join("");
+
+    // return (originalString === compareString);
+
+    return (original.toLowerCase().split("").sort().join("") === test.toLowerCase().split("").sort().join(""));
 
 };
 
-console.log(isAnagram("abc","bca"));
+console.log(isAnagram("Twoo", "WooT"));
 module.exports = {
     isAnagram : isAnagram
 };

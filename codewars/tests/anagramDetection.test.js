@@ -7,3 +7,7 @@ test("happy path test", () =>{
 test("sad path test", () =>{
     expect(isAnagramTest.isAnagram("ound", "round")).toBe(false);
 })
+
+test("'Twoo', 'WooT' returns true", () =>{
+    expect(isAnagramTest.isAnagram("Twoo", "WooT")).toBe(true);
+})
