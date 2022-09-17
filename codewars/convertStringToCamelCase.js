@@ -7,13 +7,22 @@
 function toCamelCase(str){
 
     let answer = "";
-    let localStrArray = str.split("");
+    let localStrArray = str;
 
     for(let i = 0; i < localStrArray.length; i++){
         if(localStrArray[i] == "-" || localStrArray[i] == "_"){
-            localStrArray[i+1].toUpperCase(); 
+            localStrArray.charAt(i + 1).toUpperCase() + str.slice(1);
+            //localStrArray.splice(i,1);
         }
     }
+
+    for(let j = 0; j < localStrArray.length; j++){
+        answer = answer + localStrArray[j];
+    }
+
+   
+
+    return answer;
     
 }
 
