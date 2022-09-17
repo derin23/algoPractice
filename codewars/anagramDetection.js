@@ -13,19 +13,15 @@
 //steps
 //1)
 var isAnagram = function(test, original) {
-    let originalString = original.split("").sort();
-    let compareString = test.split("").sort();
+    // let originalString = original.split("").sort().join("");
+    // let compareString = test.split("").sort().join("");
     
-    if(originalString == compareString){
-        return true;
-    }else{
-        return false;
-    }
-    
+    // return (originalString === compareString)
+    return (original.split("").sort().join("") === test.split("").sort().join(""));
 
 };
 
-isAnagram("abc","bca");
+console.log(isAnagram("abc","bca"));
 module.exports = {
     isAnagram : isAnagram
 };
