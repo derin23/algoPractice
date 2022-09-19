@@ -15,8 +15,16 @@
 //3) take last item from the array and push to local array
 //4) return new array as local array
 Array.prototype.reverse = function() {
-    return "reverse!"
+    let localArray = this;
+    let answer = [];
+    console.log(localArray);
+    for(let i = localArray.length -1; i > 0; i++){
+        answer.push(this[i]);
+    }
+    return answer;
   };
 
 let x = [1,2,3];
 console.log(x.reverse());
+
+module.exports = Array.prototype.reverse;
