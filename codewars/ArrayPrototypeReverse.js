@@ -10,7 +10,10 @@
 // input;           // == [4, 3, 2, 1]  // items reordered in the original array
 
 //steps
-//1)
+//1) create local array
+//2) look through the aray this func was called on
+//3) take last item from the array and push to local array
+//4) return new array as local array
 Array.prototype.reverse = function() {
     return "reverse!"
   };
