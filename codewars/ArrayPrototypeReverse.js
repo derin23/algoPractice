@@ -8,3 +8,12 @@
 // var input = [1, 2, 3, 4];
 // input.reverse(); // == [4, 3, 2, 1]  // returned by .reverse()
 // input;           // == [4, 3, 2, 1]  // items reordered in the original array
+
+//steps
+//1)
+Array.prototype.reverse = function() {
+    return "reverse!"
+  };
+
+let x = [1,2,3];
+console.log(x.reverse());
