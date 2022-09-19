@@ -10,21 +10,22 @@
 // input;           // == [4, 3, 2, 1]  // items reordered in the original array
 
 //steps
-//1) create local array
-//2) look through the aray this func was called on
-//3) take last item from the array and push to local array
-//4) return new array as local array
-Array.prototype.reverse = function() {
+//1) create local array and make it equal the array this func was called on
+//2) create answer array
+//3) loop through local array
+//4) take last item from the array and push to answer array
+//4) return answer array
+Array.prototype.reverse = function() { 
     let localArray = this;
     let answer = [];
-    console.log(localArray.length);
+
     for(let i = localArray.length -1; i >= 0; i--){
         answer.push(this[i]);
     }
     return answer;
   };
 
-let x = [1,2,3];
+let x = [];
 console.log(x.reverse());
 
 module.exports = Array.prototype.reverse;
