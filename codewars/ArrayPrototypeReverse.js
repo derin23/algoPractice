@@ -16,12 +16,20 @@
 //4) take last item from the array and push to answer array
 //4) return answer array
 Array.prototype.reverse = function() { //time complexity o(n) because of the for loop, space complexity: o(n) worst case because I am creating a local variable answer
-    let answer = [];
+    // let answer = [];
 
-    for(let i = this.length -1; i >= 0; i--){
-        answer.push(this[i]);
+    // for(let i = this.length -1; i >= 0; i--){
+    //     answer.push(this[i]);
+    // }
+    // return answer;
+    
+    // found this following solution online, learn more about how this solution works.
+
+    let answer = this.splice(0); 
+    while(answer.length){
+        this.push(answer.pop());
     }
-    return answer;
+    return this;
   };
 
 let x = [1,2,3];
