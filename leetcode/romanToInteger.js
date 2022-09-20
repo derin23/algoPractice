@@ -84,7 +84,7 @@ var romanToIntLong = function(s) {
     return result;
 };
 
-console.log(romanToIntLong("MCMXCIVI"));
+console.log(romanToIntLong("MCMXCIV"));
 
 module.exports = {
     romanToInt : romanToInt
