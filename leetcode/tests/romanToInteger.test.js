@@ -9,9 +9,13 @@ test("V should return 5", () => {
 });
 
 test("X should return 10", () => {
-    expect(romanToIntTest.romanToInt("V")).toBe(10);
+    expect(romanToIntTest.romanToInt("X")).toBe(10);
 });
 
 test("XL should return 40", () => {
     expect(romanToIntTest.romanToInt("XL")).toBe(40);
+});
+
+test("MCMXCIV should return 1994", () => {
+    expect(romanToIntTest.romanToInt("MCMXCIV")).toBe(1994);
 });

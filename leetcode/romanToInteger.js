@@ -56,12 +56,35 @@
 //steps
 //watch video for now and ----come back to it
  var romanToInt = function(s) {
-    const map = {"I":1}
-    console.log(map)
-    return 10;
+    const map = {I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000}
+    let res = 0;
+    s.split('').forEach((num, i) => {
+        if(map[num] < map[s[i + 1]]) res -= map[num];
+        else res += map[num];
+    });
+    return res;
 };
 
-console.log(romanToInt("X"));
+var romanToIntLong = function(s) {
+    const map = {I: 1, V: 5, X: 10, L: 50, C: 100, D: 500, M: 1000}
+    let result = 0;
+    let arrayRoman = s.split('');
+    for(let i = 0; i < arrayRoman.length; i++) {
+       // console.log(num, i);
+        if(map[arrayRoman[i]] < map[arrayRoman[i + 1]]){ 
+            console.log(result, " ", result - map[arrayRoman[i]], " if first number is smaller");
+            result -= map[arrayRoman[i]]; // result = result - map[AR[i]];
+            
+        }else {
+            console.log(result, " ", result + map[arrayRoman[i]]," if first number is bigger");
+            result += map[arrayRoman[i]];
+            
+        }
+    };
+    return result;
+};
+
+console.log(romanToIntLong("MCMXCIVI"));
 
 module.exports = {
     romanToInt : romanToInt
