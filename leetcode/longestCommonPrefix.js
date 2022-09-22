@@ -28,25 +28,20 @@
 //2)create local var to hold each element of original array
 //3)loop through 
 var longestCommonPrefix = function(strs) {
-    let answer = "";
-    let storeItems = [];
-    let match = [];
-    for(let i = 0; i < strs.length; i++){
-        storeItems.push(strs[i].split(''));
-        if(match.length < 1){
-            match = strs[i].split('');
-        } else {
-            for(let j = 0; j < match.length; j++) {
-                
-            }
+    let answer = strs[0];
+    
+   
+    for(let i = 1; i < strs.length; i++){
+        while(strs[i].indexOf(answer) !==0){
+            answer = answer.substring(0,answer.length-1);
         }
     }
-
-
+    
+    return answer + typeof(answer);
     
 };
 
-console.log(longestCommonPrefix(["flower","flow","flight"]));
+console.log(longestCommonPrefix(["carshow","racecar","car"]));
 
 module.exports = {
     longestCommonPrefix : longestCommonPrefix
