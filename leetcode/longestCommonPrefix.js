@@ -26,7 +26,8 @@
 //1)create answer string var
 //2)create global var to hold matches
 //2)create local var to hold each element of original array
-//3)loop through 
+//3)loop through
+//---- do again
 var longestCommonPrefix = function(strs) {
     let answer = strs[0];
     
