@@ -27,7 +27,7 @@
 //2)create global var to hold matches
 //2)create local var to hold each element of original array
 //3)loop through 
-var longestCommonPrefix = function(strs) {
+var longestCommonPrefix = function(strs) { //time complexity: 
     let answer = strs[0];
     
    
@@ -37,11 +37,11 @@ var longestCommonPrefix = function(strs) {
         }
     }
     
-    return answer + typeof(answer);
+    return answer;
     
 };
 
-console.log(longestCommonPrefix(["carshow","racecar","car"]));
+console.log(longestCommonPrefix(["flower","flow","flight"]));
 
 module.exports = {
     longestCommonPrefix : longestCommonPrefix
