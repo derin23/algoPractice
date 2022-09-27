@@ -224,10 +224,27 @@ function twoSum2(nums, target) {
 }
 
 
- console.log(twoSum2([1,2], 3));
+//  console.log(twoSum2([1,2], 3));
 
 // let mapx = {}
 // mapx.key = "y";
 // mapx.key = "X";
 // mapx.value = "z";   
 // console.log(mapx);
+
+
+function sumTwo(nums, target){
+    let wmap = {};
+    
+    for(let i = 0; i < nums.length; i++){
+        let currentMapValue = wmap[nums[i]];
+        if(currentMapValue !== undefined){
+            return [currentMapValue, i];
+        }else{
+            let pair = target - nums[i];
+            wmap[pair] = i;
+        }
+    }
+}
+
+console.log(sumTwo([1,2,3,4,5,6], 11));
