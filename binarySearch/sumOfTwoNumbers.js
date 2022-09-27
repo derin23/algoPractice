@@ -20,7 +20,7 @@
 
 class Solution {
 
-    solve(nums, k)  {
+    solve(nums, k)  {//time complexity: o(n^2), space complexity: o(1)
         
         for(let i = 0; i < nums.length; i++){
             let opp = k - nums[i];
@@ -32,13 +32,40 @@ class Solution {
     }
 
     solve1(nums,k){
-        
+        let map = {};
+
+        for(let i = 0; i < nums.length; i++){
+            let oppositeNum = k - nums[i];
+
+            if(map[nums[i]] !== undefined){
+                return true;
+            }else{
+                map[oppositeNum] = i;
+            }
+        }
+        return false;
+    }
+
+    solve2(nums,k){
+        let map = {};
+
+        for(let i = 0; i < nums.length; i++){
+            let oppositeNum = k - nums[i];
+
+            if(map[nums[i]] == undefined){
+                map[oppositeNum] = i;
+                
+            }else{
+                return true;
+            }
+        }
+        return false;
     }
     
 }
 
 
 const solution = new Solution();
-console.log(solution.solve([1,2,3,4,5],9));
+console.log(solution.solve2([1,2,3,4,5],9));
 
 module.exports = Solution
