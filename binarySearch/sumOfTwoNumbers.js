@@ -66,6 +66,6 @@ class Solution {
 
 
 const solution = new Solution();
-console.log(solution.solve2([1,2,3,4,5],9));
+console.log(solution.solve2([1,2,3,9,5,0],9));
 
 module.exports = Solution

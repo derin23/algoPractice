@@ -233,7 +233,7 @@ function twoSum2(nums, target) {
 // console.log(mapx);
 
 
-function sumTwo(nums, target){
+function sumTwo(nums, target){ //time complexity: o(n), space complexity: o(n)
     let wmap = {};
     
     for(let i = 0; i < nums.length; i++){
@@ -245,6 +245,7 @@ function sumTwo(nums, target){
             wmap[pair] = i;
         }
     }
+    return null;
 }
 
-console.log(sumTwo([1,2,3,4,5,6], 11));
+console.log(sumTwo([1,2,3,4,5,6], 12));
