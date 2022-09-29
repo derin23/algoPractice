@@ -31,41 +31,23 @@ class Solution {
         return false;
     }
 
-    solve1(nums,k){
+    solveKing(nums,k){
         let map = {};
-
-        for(let i = 0; i < nums.length; i++){
-            let oppositeNum = k - nums[i];
-
-            if(map[nums[i]] !== undefined){
+        for (let i = 0; i < nums.length; i++) {
+            let current = k - nums[i];
+            if(current == map[nums[i]]) {
                 return true;
-            }else{
-                map[oppositeNum] = i;
+            } else {
+                return false;
             }
         }
-        return false;
     }
 
-    solve2(nums,k){
-        let map = {};
-
-        for(let i = 0; i < nums.length; i++){
-            let oppositeNum = k - nums[i];
-
-            if(map[nums[i]] == undefined){
-                map[oppositeNum] = i;
-                
-            }else{
-                return true;
-            }
-        }
-        return false;
-    }
     
 }
 
 
 const solution = new Solution();
-console.log(solution.solve2([1,2,3,9,5,0],9));
+console.log(solution.solveKing([1,2,3,4],7));
 
 module.exports = Solution
