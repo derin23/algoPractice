@@ -28,9 +28,23 @@
 // strs[i] consists of only lowercase English letters.
 
 //steps
-//1)
+//1)create var answer and grab first word
+//2)create while loop to check if last letter match next word
+//3)if it does not match use substring to get rid of that char
+//4)else move on to next word till longest common prefix is found
+//5)return answer
 var longestCommonPrefix = function(strs) {
-    
+    let answer = strs[0];
+    console.log("answer : ",answer);
+    for(let i = 1; i < strs.length; i++){
+        while(answer !== strs[i]){
+            answer = answer.substring(0, answer.length - 1);
+            console.log("answer2 ",answer);
+            console.log(strs[i]);
+            
+        }
+    }
+    return answer;
 };
 
 console.log(longestCommonPrefix(["flower","flow","flight"]));
