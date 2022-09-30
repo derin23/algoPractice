@@ -31,16 +31,25 @@ class Solution {
         return false;
     }
 
-    solveKing(nums,k){
+    solveKing(nums,k){ // space complexity O(n), time complexity is O(n)
+//  parse through nums, if we find a pair that sums to k, return true, else false
+// 1. parse through nums
+// 2. var numToFind = k - nums[i]
+// 3. var map = {}
+// 3. check if numToFind exist in map, if it exist return true, else push val and index to map
+// 3. if none found, return false
+
         let map = {};
-        for (let i = 0; i < nums.length; i++) {
-            let current = k - nums[i];
-            if(current == map[nums[i]]) {
-                return true;
+        for (let i = 0; i < nums.length; i++) { 
+            let numToFind = k - nums[i];
+            if (map[numToFind] !== undefined) {
+                //return true;
+                return [i,map[numToFind]]; 
             } else {
-                return false;
+                map[nums[i]] = i;
             }
         }
+        return false;
     }
 
     

@@ -30,4 +30,20 @@ class Solution {
         return false;
     }
 
+   
 }
+
+ //testing a js feature 
+
+function doSomething(){
+    let array = "1,2,3";
+    const split =  splitArray(array);
+    return split;
+}
+
+
+ function splitArray(array) {
+        array.split(",");
+}
+
+console.log(doSomething());
