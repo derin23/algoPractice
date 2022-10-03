@@ -36,13 +36,13 @@ class Solution {
  //testing a js feature 
 
 function doSomething(){
-    let array = "1,2,3";
-    const split =  splitArray(array);
+    let some = "1,2,3";
+    const split =  new splitArray(some);
     return split;
 }
 
 
- function splitArray(array) {
+ function splitArray(some) {
         array.split(",");
 }
 
