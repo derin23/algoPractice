@@ -50,3 +50,7 @@
     return -1;
 
 };
+
+module.exports = {
+    search : search
+}
