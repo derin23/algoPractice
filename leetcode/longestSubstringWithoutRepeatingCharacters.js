@@ -32,13 +32,48 @@
 
 // Constraints:
 
-// 0 <= s.length <= 5 * 104
+// 0 <= s.length <= 5 * 10^4
 // s consists of English letters, digits, symbols and spaces.
 
 /*
  * @param {string} s
  * @return {number}
  */
+
+//Brute force
+//  
+// 1) variables: answer = highest substring count, uniqueChars = array of non matching chars
+// 2) parse through s, if char does not exist in uniqueChars, push char, counter++ else if it does exist, 
+// reset uniqueChar and push current char to unique char
+// 3) if answer < uniqueChar.length, answer = unique.length 
+// 4) return answer
+
  var lengthOfLongestSubstring = function(s) {
+ 
+    let answer = 0;
+    let currentCounter = 0;
+    let uniqueChar = [];
+
+    for(let i = 0; i < s.length; i++) {
+        if(!uniqueChar.includes(s[i])) {
+            uniqueChar.push(s[i]);
+            currentCounter++;
+        } else {
+            if(currentCounter > answer) {
+                answer = currentCounter;
+            }
+            uniqueChar = [];
+            uniqueChar.push(s[i]);
+            currentCounter = 1;
+        } 
+    }
+    if(currentCounter > answer) {
+        answer = currentCounter;
+    }
     
+    return answer;
 };
+// left pointer = 0;
+// right pointer = 1;
+"dvdf"
+console.log("expect 3: ",lengthOfLongestSubstring("dvdf"));
