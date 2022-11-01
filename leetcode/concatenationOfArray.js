@@ -62,4 +62,3 @@ var getConcatenation1 = function(nums) {
     };
     return res;
 };
-a.push(...a);
