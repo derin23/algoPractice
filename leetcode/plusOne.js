@@ -33,10 +33,35 @@
 // 0 <= digits[i] <= 9
 // digits does not contain any leading 0's.
 
+//version one does not work for [9,9]
 var plusOne = function(digits) {
-    for(let i = 0; i < digits.length; i++){
-        
+
+    if(digits[digits.length -1] == 9){
+        digits[digits.length -1] = 1;
+        digits.push(0);
+
+        return digits
+    }else{
+        digits[digits.length - 1]++;
     }
+
+    return digits;
 };
 
-console.log(plusOne([1,2,3]));
+// console.log(plusOne([1,2,3]));
+
+//version 2
+var plusOne = function(digits) {
+
+   let x = BigInt(digits.join(""));
+   x++;
+   x = x.toString();
+   let answer = [];
+   for(let i = 0; i < x.length; i++){
+    answer.push(parseInt(x[i]));
+   }
+ 
+   return answer;
+};
+
+console.log(plusOne([6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,5,5,4,3]));
