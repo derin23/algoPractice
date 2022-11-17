@@ -29,7 +29,7 @@
 //steps
 //1)
 var generateParenthesis = function(n) {
-    return ["((()))","(()())","(())()","()(())","()()()"];
+    
 };
 
 module.exports = {
