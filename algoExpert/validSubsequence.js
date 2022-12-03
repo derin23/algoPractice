@@ -2,18 +2,18 @@
 //steps
 //1)
 function isValidSubsequence(array, sequence) {
-    let check = true;
+    // let sequenceLength = sequence.length;
+    // let numOfSameItems = 0;
     for(let i = 0; i < array.length; i++) {
         for(let j = 0; j < sequence.length; j++) {
-            if (sequence[j] === array[i]) {
-                check = true;
-                break;
-            } else {
-                check = false;
-            }
+            // if(sequence[j] === array[i]){
+            //     numOfSameItems++;
+            // }
+            
         }
     }
-return check;
+    // if(sequenceLength == numOfSameItems){
+    // return true}
 
   }
 
@@ -21,4 +21,4 @@ return check;
     isValidSubsequence : isValidSubsequence
   }
 
-  console.log(isValidSubsequence([1,2,3,4,5],[2]));
+  console.log(isValidSubsequence([1,2,3,4,5],[2,1]));
