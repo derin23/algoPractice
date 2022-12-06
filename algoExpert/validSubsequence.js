@@ -35,4 +35,39 @@ function isValidSubsequence(array, sequence) {
         }else return false;
     }
   }
-  console.log(isValidSubsequence1([1, 1, 1, 1, 1],[1,1,1]));
+  // console.log(isValidSubsequence1([1, 1, 1, 1, 1],[1,1,1]));
+
+// this works
+  function isValidSubsequence2(array, sequence) {
+    
+    let pointerA = 0;
+    let pointerB = 0;
+
+    while(pointerA <= array.length) {
+      if (pointerB == sequence.length ) {
+        return true;
+      } else if(sequence[pointerB] == array[pointerA]) {
+        pointerA ++;
+        pointerB ++;
+      } else {
+        pointerA++;
+      }
+    }
+    return false;
+  }
+
+  // console.log(isValidSubsequence2([5, 1, 22, 25, 6, 8, 10, 11],[1, 6, 10,11]));
+//this also works
+  function isValidSubsequence3(array, sequence) {
+    let arrIdx = 0;
+    let seqIdx = 0;
+    while (arrIdx < array.length && seqIdx < sequence.length){
+      if(array[arrIdx] == sequence[seqIdx]){
+        seqIdx++;
+      }
+      arrIdx++;
+    }
+    return seqIdx == sequence.length;
+  }
+
+  console.log(isValidSubsequence3([5, 1, 22, 25, 6, 8, 10, 11],[1, 6, 10,11]));
