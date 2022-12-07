@@ -57,7 +57,7 @@ function isValidSubsequence(array, sequence) {
   }
 
   // console.log(isValidSubsequence2([5, 1, 22, 25, 6, 8, 10, 11],[1, 6, 10,11]));
-//this also works
+//this also works /best solution
   function isValidSubsequence3(array, sequence) {
     let arrIdx = 0;
     let seqIdx = 0;
