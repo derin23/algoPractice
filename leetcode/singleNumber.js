@@ -38,7 +38,7 @@ var singleNumber = function(nums) {
     if(nums.length < 2){
         return nums[0];
     }else{
-        // still stuck
+        // still stuck 
     }
 };
 
