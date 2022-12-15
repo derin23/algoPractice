@@ -34,6 +34,7 @@
 // -3 * 104 <= nums[i] <= 3 * 104
 // Each element in the array appears twice except for one element which appears only once.
 
+//rethink
 var singleNumber = function(nums) {
     if(nums.length < 2){
         return nums[0];
