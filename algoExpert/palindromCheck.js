@@ -28,6 +28,10 @@ function isPalindrome(string) {
 
   function isPalindromeRecursion(string) {
     // Write your code here.
+    let first = 0;
+    let last = string.length -1;
+    let mid = ((string[last]+string[first])/2);
+    return
 
   }
 
