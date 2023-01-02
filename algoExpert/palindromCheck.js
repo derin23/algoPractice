@@ -26,13 +26,43 @@ function isPalindrome(string) {
 
   //console.log(isPalindrome1("abcdcba"));
 
-  function isPalindromeRecursion(string) {
+  function isPalindromeOptimal(string) {
     // Write your code here.
     let first = 0;
     let last = string.length -1;
-    let mid = ((string[last]+string[first])/2);
-    return
+    let mid = ((last + first)/2);
+    // let answer = true;
+    while(first < mid && last > mid){
+      if(string[first] != string[last]){
+        return false;
+      }else{
+        first++;
+        last--;
+      }
+    }
+    return true;
 
   }
 
-  //console.log(isPalindrome1("abcdcba"));
+  console.log(isPalindromeOptimal("ab"));
+
+  //made a small change on while loop condition
+  function isPalindromeOptimal(string) {
+    // Write your code here.
+    let first = 0;
+    let last = string.length -1;
+    let mid = ((last + first)/2);
+    // let answer = true;
+    while(first < last){
+      if(string[first] != string[last]){
+        return false;
+      }else{
+        first++;
+        last--;
+      }
+    }
+    return true;
+
+  }
+
+  console.log(isPalindromeOptimal("aba"));
