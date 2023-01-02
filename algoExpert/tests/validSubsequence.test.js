@@ -7,3 +7,7 @@ test("returns true",()=>{
 test("returns false",()=>{
     expect(validSubsequenceTest.isValidSubsequence([1,2,3,4,5],[6,7,8])).toBe(false);
 })
+
+test("returns false",()=>{
+    expect(validSubsequenceTest.isValidSubsequence([1,2,3,4,5,6],[7,8,9])).toBe(false);
+})
