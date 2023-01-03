@@ -47,7 +47,7 @@ function isPalindrome(string) {
   console.log(isPalindromeOptimal("ab"));
 
   //made a small change on while loop condition
-  function isPalindromeOptimal(string) {
+  function isPalindromeOptimal1(string) {
     // Write your code here.
     let first = 0;
     let last = string.length -1;
@@ -65,4 +65,11 @@ function isPalindrome(string) {
 
   }
 
-  console.log(isPalindromeOptimal("aba"));
+  console.log(isPalindromeOptimal1("aba"));
+
+module.exports = {
+  isPalindrome : isPalindrome,
+  isPalindrome1 : isPalindrome1,
+  isPalindromeOptimal : isPalindromeOptimal,
+  isPalindromeOptimal1 : isPalindromeOptimal1
+}
