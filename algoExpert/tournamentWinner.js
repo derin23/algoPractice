@@ -1,15 +1,31 @@
-function tournamentWinner(array) {
+function tournamentWinner(competitions, results) {
     // Write your code here.
-    // Do not understand the question fully yet!
+ const leader = {score: -Infinity, name: ""};
+ const scoreboard = {};
 
-    
- 
-    return;
+ for(let i = 0; i < competitions.length; i++){
+  const winnerIdx = results[i] === 0 ? 1 : 0;
+  const winner = competitions[i][winnerIdx];
+
+  if(winner in scoreboard) scoreboard[winner] += 3;
+  else scoreboard[winner] = 3;
+
+  if (leader.score < scoreboard[winner]){
+    leader.name = winner;
+    leader.score = scoreboard[winner];
   }
+ }
+    
+  return leader.name;
+}
 
   module.exports = {
     tournamentWinner : tournamentWinner
   }
 
 
-  console.log(tournamentWinner([1,2,3,4]));
+  console.log(tournamentWinner([
+  ["HTML", "C#"],
+  ["C#", "Python"],
+  ["Python", "HTML"]
+],[0,0,1]));
