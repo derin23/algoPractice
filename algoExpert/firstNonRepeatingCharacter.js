@@ -23,8 +23,29 @@ function firstNonRepeatingCharacter(string) {
     
   }
 
-  module.exports = {
-    firstNonRepeatingCharacter : firstNonRepeatingCharacter
+  //optimal solution
+  function firstNonRepeatingCharacter1(string) {
+    // Write your code here.
+    let characterFrequencies = new Map();
+
+    for(let character of string){
+        characterFrequencies[character] = (characterFrequencies[character] || 0)+1;
+    }
+   
+    for(let idx = 0; idx < string.length; idx++){
+        
+       let character = string[idx];
+       if(characterFrequencies[character] === 1){
+        return idx
+       }
+    }
+    return -1
+    
   }
 
-  console.log(firstNonRepeatingCharacter("abcdcaf"));
+  module.exports = {
+    firstNonRepeatingCharacter : firstNonRepeatingCharacter,
+    firstNonRepeatingCharacter1 : firstNonRepeatingCharacter1
+  }
+
+  console.log(firstNonRepeatingCharacter1("abcdcaf"));
