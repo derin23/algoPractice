@@ -6,10 +6,10 @@ class LinkedList {
     }
   }
   
-  //O(n) time?
+  //O(n) time O(1) space
   function removeDuplicatesFromLinkedList(linkedList) {
 
-    let currentNode = test.linkedList; 
+    let currentNode = linkedList; 
     
     while (currentNode !== null){
         let nextDistintNode = currentNode.next; 
@@ -50,3 +50,4 @@ class LinkedList {
   }
 
 
+  console.log(removeDuplicatesFromLinkedList(test));
