@@ -6,8 +6,9 @@ class LinkedList {
     }
   }
   
+  //O(n) time?
   function removeDuplicatesFromLinkedList(linkedList) {
-    // Write your code here.
+
     let currentNode = test.linkedList; 
     
     while (currentNode !== null){
