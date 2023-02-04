@@ -20,25 +20,25 @@ const twoSum = function(nums, target) {
 //twoSum([1,2,3,5,7], 12); 
 
 //Optimal solution
-// const towSumOptimal = function(nums, target){
-//    const numsMap = {};
-//    for( let p=0; p<nums.length; p++){
-//     const currentMapVal = numsMap[nums[p]];  
-//     if(currentMapVal >= 0){
-//         console.log([currentMapVal,p]);
-//         return [currentMapVal, p];
-//     }else{
-//         const numToFind = target-nums[p];
-//         numsMap[numToFind] = p;
-//     }
-//    } 
-//    return null;
-// }
+const towSumOptimal = function(nums, target){
+   const numsMap = {};
+   for( let p=0; p<nums.length; p++){
+    const currentMapVal = numsMap[nums[p]];  
+    if(currentMapVal >= 0){
+        console.log([currentMapVal,p]);
+        return [currentMapVal, p];
+    }else{
+        const numToFind = target-nums[p];
+        numsMap[numToFind] = p;
+    }
+   } 
+   return null;
+}
 
-// towSumOptimal([1,2,3,5,7], 12);
+towSumOptimal([1,2,3,5,7], 12);
 
 //twoSum trying to solve on my own
-const towSumOptimal = function(nums,target){
+const towSumOptimal1 = function(nums,target){
     let map = {};
     for(let i = 0; i < nums.length; i++){
         // const currentMapVal = ;
