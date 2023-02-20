@@ -15,7 +15,23 @@ function getNthFib(n) {
   
   console.log(getNthFib(6));
 
+  //better solution using memoization -- Time complexity: O(n), Space complexity: O(n)
+  function getNthFib1(n, memoize = {1:0, 2: 1}) {
+    // Write your code here.
+   if(n in memoize){
+    return memoize[n];
+   }else{
+    memoize[n] = getNthFib(n-1, memoize) + getNthFib(n -2, memoize);
+    return memoize[n];
+   }
+
+  }
+  
+  console.log(getNthFib1(6));
+
+
   
 module.exports = {
-    getNthFib : getNthFib
+    getNthFib : getNthFib,
+    getNthFib1 : getNthFib1
   }
