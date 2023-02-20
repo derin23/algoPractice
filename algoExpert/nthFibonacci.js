@@ -29,9 +29,31 @@ function getNthFib(n) {
   
   console.log(getNthFib1(6));
 
+  //iterative solution, best option if recursion is not required -- Time: O(n), Space: O(1)
+  function getNthFib2(n) {
+    // Write your code here.
+   let lastTwo = [0,1];
+   let counter = 3;
+
+   while(counter <=n){
+    let nextFib = lastTwo[0] + lastTwo[1];
+    lastTwo[0] = lastTwo[1];
+    lastTwo[1] = nextFib;
+    counter ++;
+   }
+   if(n>1){
+    return lastTwo[1];
+   }else{
+    lastTwo[0];
+   }
+  }
+  
+  console.log(getNthFib2(6));
+
 
   
 module.exports = {
     getNthFib : getNthFib,
-    getNthFib1 : getNthFib1
+    getNthFib1 : getNthFib1,
+    getNthFib2 : getNthFib2
   }
