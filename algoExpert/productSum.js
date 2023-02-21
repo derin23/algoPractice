@@ -1,4 +1,4 @@
-//Link to orginal problem: https://www.algoexpert.io/questions/product-sum
+//Link to original problem: https://www.algoexpert.io/questions/product-sum
 
 // Tip: You can use the Array.isArray function to check whether an item
 // is a list or an integer.

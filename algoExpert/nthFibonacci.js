@@ -1,4 +1,4 @@
-//Link to orginal question: https://www.algoexpert.io/questions/nth-fibonacci
+//Link to original question: https://www.algoexpert.io/questions/nth-fibonacci
 
 //brute force -- Time complexity: O(2^n), Space complexity: O(n)
 function getNthFib(n) {
