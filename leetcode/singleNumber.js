@@ -36,13 +36,35 @@
 
 //rethink
 var singleNumber = function(nums) {
+    let map = {};
+
     if(nums.length < 2){
         return nums[0];
-    }else{
-        // still stuck 
+    }
+
+
+    for(let num of nums){
+        if(map[num]){
+            map[num] += 1;
+        }else{
+            map[num] = 1;
+        }
+    }
+  
+    for(let key in map){
+        if(map[key] == 1){
+            return key;
+        }
     }
 };
+
+
 
 module.exports = {
     singleNumber : singleNumber
 }
+
+
+let nums = [4,1,2,1,2];
+
+console.log(singleNumber(nums));
