@@ -51,6 +51,6 @@ class Solution:
             return self.isPowerOfThree(n = n/3)
         return n == 1
 
-#ask King how to call class methods
-solution = Solution
+
+solution = Solution()
 print(solution.isPowerOfThree(27))
