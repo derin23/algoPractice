@@ -16,18 +16,11 @@ class MinMaxStack:
             return None
 
     def push(self, number):
-        #Write your code here.
-        # if number > self.max:   
-        #     self.max = number
-        # if number < self.min:
-        #     self.min = number
-        # print('num:', number, ',max:', self.max, ',min:', self.min)
         self.data.append(number)
 
 
     def getMin(self):
         # Write your code here.
-        print("min func ",self.min)
         min = float('inf')
         for num in self.data:
             if num < min:
@@ -36,7 +29,6 @@ class MinMaxStack:
 
     def getMax(self):
         # Write your code here.
-        print("max func ",self.max)
         max = -float('inf')
         for num in self.data:
             if num > max:
