@@ -93,7 +93,7 @@ var romanToInt = function(s) {
   return result;
 };
 
-console.log(romanToInt("MCMXCIV"));
+console.log(romanToInt("MCMXCVI"));
 
 module.exports = {
     romanToInt : romanToInt
