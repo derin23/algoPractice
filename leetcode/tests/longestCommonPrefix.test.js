@@ -9,3 +9,7 @@ test(' ["flower","flow","flight"] should return "fl"', () => {
 test(' ["flower","flow","flight"] should return "fl"', () => { 
     expect(longestCommonPrefixTest1.longestCommonPrefix(["flower","flow","flight"])).toBe("fl");
  })
+
+ test(' [] should return null', () => { 
+    expect(longestCommonPrefixTest1.longestCommonPrefix([])).toBe(null);
+ })
