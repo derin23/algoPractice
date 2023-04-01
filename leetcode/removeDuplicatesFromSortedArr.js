@@ -56,11 +56,5 @@
 
 //redo the prob, missunderstood
 var removeDuplicates = function(nums) {
-    let mySet = new Set();
-    for(let i =0; i <nums.length; i++){
-        mySet.add(nums[i]);
-    }
-    let resultArray = Array.from(mySet);
-    console.log(resultArray)
-    return resultArray;
+    //come up with new strat
 };
