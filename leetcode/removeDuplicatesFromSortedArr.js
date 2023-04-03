@@ -57,5 +57,5 @@
 //redo the prob, missunderstood
 var removeDuplicates = function(nums) {
     //come up with new strat
-    let map = new Map();
+    
 };
