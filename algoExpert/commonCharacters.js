@@ -11,10 +11,10 @@ function commonCharacters(strings) {
     for(let element of strings){
         let uniqueStringChars = new Set(element);
         for(char of uniqueStringChars){
-            if(!char in seenLetters){
-                seenLetters[char] = 0;
-            }
-            seenLetters[char] += 1;
+//             if(!char in seenLetters){
+//                 seenLetters[char] = 0;
+//             }
+//             seenLetters[char] += 1;
         }
     }
 
