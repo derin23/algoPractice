@@ -11,6 +11,7 @@ function commonCharacters(strings) {
     for(let element of strings){
         let uniqueStringChars = new Set(element);
         for(char of uniqueStringChars){
+            //having issues converting python to js
 //             if(!char in seenLetters){
 //                 seenLetters[char] = 0;
 //             }
