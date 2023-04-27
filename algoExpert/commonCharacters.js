@@ -12,10 +12,10 @@ function commonCharacters(strings) {
         let uniqueStringChars = new Set(element);
         for(char of uniqueStringChars){
             //having issues converting python to js
-//             if(!char in seenLetters){
-//                 seenLetters[char] = 0;
-//             }
-//             seenLetters[char] += 1;
+            if(!char in seenLetters){
+                seenLetters[char] = 0;
+            }
+            seenLetters[char] += 1;
         }
     }
 
