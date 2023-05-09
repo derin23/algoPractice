@@ -30,3 +30,14 @@
 
 // -1000 <= n <= 1000
 // At most 1000 calls to counter() will be made
+/**
+ * @param {number} n
+ * @return {Function} counter
+ */
+var createCounter = function(n) {
+    return function() {
+        return n++;
+    };
+};
+
+console.log(createCounter(10));
