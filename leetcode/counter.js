@@ -33,6 +33,8 @@
 /**
  * @param {number} n
  * @return {Function} counter
+ 
+ how does this answer work?
  */
 var createCounter = function(n) {
     return function() {
