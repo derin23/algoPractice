@@ -53,5 +53,12 @@ Both list1 and list2 are sorted in non-decreasing order.
  * @return {ListNode}
  */
 var mergeTwoLists = function(list1, list2) {
-    
+    let result = new ListNode()
+    for(item in list1){
+        for(node in list2){
+            if(item < node){
+                result
+            }
+        }
+    }
 };
