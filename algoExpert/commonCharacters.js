@@ -1,54 +1,56 @@
 //Link to problem: https://www.algoexpert.io/questions/common-characters
 
-// function commonCharacters(strings) {
-//     // Write your code here.
-//     let alph = {
-//         "a":false, "b":false, "c":false, "d":false, "e":false, "f":false, "g":false, "h":false, "i":false, "k":false, "l":false, "m":false, "n":false, "o":false, "p":false, "q":false, "r": false, "s":false, "t":false, "u":false, "v":false, "w":false, "x":false, "y":false, "z":false
-//     }
-
-//     let seenLetters = new Map();
-
-//     for(let element of strings){
-//         let uniqueStringChars = new Set(element);
-//         for(char of uniqueStringChars){
-//             //having issues converting python to js
-//             if(!char in seenLetters){
-//                 seenLetters[char] = 0;
-//             }
-//             seenLetters[char] += 1;
-//         }
-//     }
-
-//     return seenLetters;
-//   }
-  
+//run elements through a set then add each letter to a map as a key and have the value as the count.
+//If the count does equal number of elements then we add it to an array then return the array.
+//Time: O(n^2), Space: O(n)
 function commonCharacters(strings) {
     // Write your code here.
+    let result = new Array();
     let map = new Map();
-  
+    
     for(let word of strings){
-        let set = new Set();
-        let i = 0;
-        let value = 1;
-        for(let letter of word){
-            set.add(letter);
-        }
-        if(!map.has(set[i])){
-            map.set(letter,value);
-            i++;
-        }else{
-            map.set(letter,value++);
-            i++;
-        }
-        
-    }
+        let element = word.split("");
+        let set = new Set(element);
+
     
 
-    return map;
-  }
-  
-  // Do not edit the line below.
-  exports.commonCharacters = commonCharacters;
-  
+        let dummyArr = [];
+      
+       
+        console.log("dummyArr",dummyArr)
+        const iterableSet = [...set];
+        for(let letter of iterableSet){
+            console.log(letter);
+            if(!map.has(letter)){
+                map.set(letter,1);
+                //console.log(map)
+            }else{
+              //  console.log('get letter', map.get(letter))
+                map.set(letter, (map.get(letter)+1));
+            }
+        }
+    }
 
- console.log(commonCharacters(["abc", "bcd", "cbaccd"]));
+    for(let [key,value] of map){
+        if(value == strings.length){
+            result.push(key);
+        }
+    }
+
+    return result;
+}
+
+
+
+
+// 'abc', 'bcd', 'cbaccd'
+
+//abc => set(abc)
+// map{a:1, b:1, c:1}
+
+//bcd => set(bcd)
+// map{a:1, b:2, d:1}
+
+let arr = ['abc', 'bcd', 'cbaccd'];
+console.log(commonCharacters(arr));
+
