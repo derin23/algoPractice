@@ -9,6 +9,7 @@
 // ['1','2'] => false
 // [{1:1},{2:2}] => false
 // const arrCheck = value =>
+//time complexity: O(n) space complexity: o(1)?
 function arrCheck(value) {
   if(value == null || value == undefined || value == ""){
     return false
