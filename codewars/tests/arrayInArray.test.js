@@ -15,3 +15,12 @@ test("Testing empty input",() =>{
 test("Testing not an array in an array",() =>{
     expect(arrayTest(["",""])).toBe(false);
 })
+
+test("Testing empty array",() =>{
+    expect(arrayTest([])).toBe(false);
+})
+
+test("Testing one array and one object in Array",() =>{
+    expect(arrayTest([[],{}])).toBe(false);
+})
+

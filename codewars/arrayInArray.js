@@ -12,15 +12,17 @@
 //time complexity: O(n) space complexity: o(1)?
 function arrCheck(value) {
   if(value == null || value == undefined || value == ""){
-    return false
-  }  
+    return false;
+  } 
+
   let count = 0;
-    for(let i = 0; i < value.length; i++){
-      if(Array.isArray(value[i]) == true) {count++}  
-    }
-    if(count == value.length){;
-      return true;
-    }
+  for(let i = 0; i < value.length; i++){
+    if(Array.isArray(value[i]) == true) {count++}  
+  }
+  if(count == value.length){;
+    return true;
+  }
+
   return false;
 }
 
