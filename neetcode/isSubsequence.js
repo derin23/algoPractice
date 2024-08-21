@@ -67,5 +67,28 @@ var isSubsequence = function(s, t) {
     return true;
 };
 //let s = "", t = "ahbgdc";
+// let s = "abc", t = "ahbgdc";
+// console.log(isSubsequence(s,t));
+
+
+var isSubsequenceV2 = function(s, t) {
+    let i = 0, j = 0;
+    while((i < s.length) && (j < t.length)){
+        if(s[i] == t[j]){
+            i++;
+        }
+        j++
+    }
+    console.log(i)
+    if(i == s.length ){
+        return true;
+    }
+    
+    return false;
+    
+}
+
 let s = "abc", t = "ahbgdc";
-console.log(isSubsequence(s,t));
+    
+//let s = "abc", t = "ahbgdc";
+console.log(isSubsequenceV2(s,t));
