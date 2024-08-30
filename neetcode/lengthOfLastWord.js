@@ -43,18 +43,23 @@
  Time: O(n)
  Space: O(1)
  */
-var lengthOfLastWord = function(s) {
-    let count = 0;
-    for(let i = s.length -1; i >=0; i--){
-        if (s[i] == " " && count != 0) {
-            break;
-        }
-        else if(s[i] != " "){
-            count++;
-        }
-    }
-    return count;
-};
 
-console.log(lengthOfLastWord(" t"));
+function lengthOfLastWord(s){
+    
+    let i = s.length -1;
+    let counter = 0
+
+    while((s[i] == " ")){
+        i -= 1;
+    
+    }
+    while(i >= 0 && s[i] != " "){
+        i -= 1;
+        counter++
+    }
+    return counter;
+}
+
+
+console.log(lengthOfLastWord(" test "));
 
