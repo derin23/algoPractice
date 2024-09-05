@@ -63,8 +63,27 @@
         }
     }
 
+    function twoSumV3(nums, target){ //time: o(n), space: o(1)
+        let start = 0;
+        let end = nums.length -1;
 
-    console.log(twoSumV2([3,4,5,6],11));
+        nums.sort((a, b) => a - b);
+        console.log(nums);
+
+        while(start < end){
+            let total = nums[start] + nums[end];
+            if(total === target){
+                return [start,end];
+            }else if(total < target){
+                start++;
+            }else{
+                end--;
+            }
+        }
+    }
+
+    
+    console.log(twoSumV3([6,4,5,3],11));
 
     
 
