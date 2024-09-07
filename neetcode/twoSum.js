@@ -63,7 +63,7 @@
         }
     }
 
-    function twoSumV3(nums, target){ //time: o(n), space: o(1)
+    function twoSumV3(nums, target){ //time: o(n), space: o(n) //same as map solution
         let start = 0;
         let end = nums.length -1;
 
