@@ -84,6 +84,8 @@
 
     
     console.log(twoSum([6,4,5,3],11));
+    console.log(twoSumV2([6,4,5,3],11));
+    console.log(twoSumV3([6,4,5,3],11));
 
     
 
