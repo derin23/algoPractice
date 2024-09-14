@@ -88,7 +88,7 @@ var isSubsequenceV2 = function(s, t) {
     
 }
 
-let s = "abc", t = "ahbgdc";
-    
 //let s = "abc", t = "ahbgdc";
+    
+let s = "abc", t = "ahbgdc";
 console.log(isSubsequenceV2(s,t));
